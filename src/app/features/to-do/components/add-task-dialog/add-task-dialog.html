@@ -1,0 +1,24 @@
+<div class="dialog">
+  <h2 mat-dialog-title>{{ data.title }}</h2>
+
+  <form [formGroup]="form" class="form">
+    <mat-form-field class="title-field">
+      <mat-label>Titulo</mat-label>
+      <input formControlName="title" matInput placeholder="titulo da tarefa" />
+    </mat-form-field>
+
+    <mat-form-field class="desc-field">
+      <mat-label>Descrição</mat-label>
+      <textarea
+        formControlName="desc"
+        matInput
+        placeholder="detalhes sobre a tarefa..."
+      ></textarea>
+    </mat-form-field>
+  </form>
+
+  <div class="actions">
+    <button mat-button mat-dialog-close>Fechar</button>
+    <button matButton="filled" (click)="onSave()">Salvar</button>
+  </div>
+</div>

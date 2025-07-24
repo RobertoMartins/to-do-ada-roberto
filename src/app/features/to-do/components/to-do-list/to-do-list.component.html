@@ -1,0 +1,12 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  @for (task of tasks; track task) {
+
+    <div style="padding: 5px;">
+  <app-task-component
+    cdkDrag
+    [task]="task"
+    (checkChange)="changeCheck(task)"
+  ></app-task-component>
+  </div>
+  }
+</div>

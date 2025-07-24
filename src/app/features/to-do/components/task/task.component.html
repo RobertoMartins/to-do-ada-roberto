@@ -1,0 +1,23 @@
+<div
+  class="task-item"
+  [ngClass]="{ completed: task.completed }"
+  (mouseenter)="hover = true"
+  (mouseleave)="hover = false"
+>
+  <div class="task-content">
+    <div class="check">
+      <mat-checkbox [(ngModel)]="task.completed" color="primary" (change)="checkChange.emit(task.completed); openAlert()"></mat-checkbox>
+    </div>
+
+    <span class="title">{{ task.title }}</span>
+    <button
+      *ngIf="hover"
+      mat-button
+      color="accent"
+      (click)="openDetailDialog()"
+      class="detail-button"
+    >
+      Detalhar
+    </button>
+  </div>
+</div>

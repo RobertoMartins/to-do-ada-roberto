@@ -1,0 +1,29 @@
+.task-item {
+  display: flex;
+  padding: 5px;
+  margin-bottom: 8px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #8a8a8a;
+
+  .title {
+    flex-grow: 1;
+    margin-left: 8px;
+  }
+
+  .task-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detail-button {
+    font-size: 12px;
+  }
+
+  &.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+  }
+  
+}
