@@ -1,59 +1,12 @@
-# ToDoAppRoberto
+# ToDo App Roberto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+Aplicação Angular de lista de tarefas (To-Do List), desenvolvida como atividade individual do curso de Angular 1 da ADA Tech. Onde o usuário deve poder adicionar, visualizar e remover tarefas.
+Desenvolvido utilizando somente os conceitos fundamentais do Angular, focando em comunicação entre componentes com @Input e @Output, interpolação de dados, property binding e event binding.
 
-## Development server
+### Funcionalidades
 
-To start a local development server, run:
+- Campo de entrada para adicionar novas tarefas.
+- Exibição dinâmica da lista de tarefas.
+- Remover tarefa da lista.
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  <img width="1598" height="724" alt="image" src="https://github.com/user-attachments/assets/1edfbffd-81a1-45f5-91b8-13a4fa42b27e" />
