@@ -6,18 +6,26 @@
 >
   <div class="task-content">
     <div class="check">
-      <mat-checkbox [(ngModel)]="task.completed" color="primary" (change)="checkChange.emit(task.completed); openAlert()"></mat-checkbox>
+      <mat-checkbox
+        [(ngModel)]="task.completed"
+        color="primary"
+        (change)="checkChange.emit(task.completed); openAlert()"
+      ></mat-checkbox>
     </div>
 
-    <span class="title">{{ task.title }}</span>
+    <div class="title">
+      <span>{{ task.title }}</span>
+    </div>
     <button
-      *ngIf="hover"
       mat-button
       color="accent"
       (click)="openDetailDialog()"
       class="detail-button"
     >
       Detalhar
+    </button>
+    <button matIconButton (click)="actionDelete()">
+      <mat-icon>delete</mat-icon>
     </button>
   </div>
 </div>

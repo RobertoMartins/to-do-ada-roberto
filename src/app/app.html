@@ -1,11 +1,11 @@
 <div class="content">
   <h1 class="title">ToDo ADA</h1>
-   <div class="add">
-        <button matFab extended (click)="openModalAdd()">
-          <mat-icon>add</mat-icon>
-          Nova tarefa
-        </button>
-      </div>
+  <div class="add">
+    <button matFab extended (click)="openModalAdd()">
+      <mat-icon>add</mat-icon>
+      Nova tarefa
+    </button>
+  </div>
   <mat-tab-group>
     <mat-tab>
       <ng-template mat-tab-label>
@@ -21,6 +21,7 @@
       <app-to-do-list
         [tasks]="tasks"
         (checkedChange)="filterTasks()"
+        (onDelete)="delete($event)"
       ></app-to-do-list>
       }@else {
       <div class="empty-list">
@@ -43,6 +44,7 @@
       <app-to-do-list
         [tasks]="taskCompleted"
         (checkedChange)="filterTasks()"
+        (onDelete)="delete($event)"
       ></app-to-do-list>
       }@else {
       <div class="empty-list">
@@ -51,4 +53,7 @@
       }
     </mat-tab>
   </mat-tab-group>
+  <div class="footer">
+    <span>Version 1.0.0 - By Roberto Murilo</span>
+  </div>
 </div>

@@ -1,20 +1,20 @@
 .task-item {
-  display: flex;
   padding: 5px;
   margin-bottom: 8px;
   position: relative;
   background-color: #fff;
   border: 1px solid #8a8a8a;
+  width: 100%;
 
   .title {
     flex-grow: 1;
     margin-left: 8px;
+    width: 80%;
   }
 
   .task-content{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center;;
   }
 
   .detail-button {

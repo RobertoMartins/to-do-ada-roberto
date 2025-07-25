@@ -9,13 +9,20 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailDialogComponent } from './components/task-detail-dialog/task-detail-dialog';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AddTaskDialog } from './components/add-task-dialog/add-task-dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
-  declarations: [ToDoList, TaskComponent, TaskDetailDialogComponent, AddTaskDialog],
+  declarations: [
+    ToDoList,
+    TaskComponent,
+    TaskDetailDialogComponent,
+    AddTaskDialog,
+  ],
   imports: [
     CommonModule,
     DragDropModule,
@@ -25,9 +32,11 @@ import { MatInputModule } from '@angular/material/input';
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    MatChipsModule,
+    ReactiveFormsModule,
   ],
-  exports: [ToDoList]
+  exports: [ToDoList],
 })
 export class ToDoModule {}

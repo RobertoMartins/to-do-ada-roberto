@@ -21,6 +21,9 @@ export class TaskComponent {
   @Output()
   checkChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  @Output()
+  onDelete: EventEmitter<Task> = new EventEmitter<Task>();
+
   hover = false;
   private dialog = inject(MatDialog);
   private _snackBar = inject(MatSnackBar);
@@ -32,14 +35,23 @@ export class TaskComponent {
   }
 
   openAlert(): void {
+    const config: MatSnackBarConfig = {
+      duration: 2000,
+    };
     if (!this.task.completed) {
-      const config: MatSnackBarConfig = {
-        duration: 2000,
-        panelClass: ['snackbar-success'],
-      };
       this._snackBar.open("Tarefa retornada para 'A Fazer'.", '', config);
     } else {
-      this._snackBar.open('Tarefa concluída com sucesso.');
+      this._snackBar.open('Tarefa concluída com sucesso.', '', config);
     }
+  }
+
+  actionDelete(): void {
+    this.onDelete.emit(this.task);
+
+    const config: MatSnackBarConfig = {
+      duration: 2000,
+    };
+
+    this._snackBar.open("Tarefa excluída com sucesso.", '', config);
   }
 }

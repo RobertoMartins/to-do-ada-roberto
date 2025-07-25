@@ -87,8 +87,13 @@
 
 .add {
   padding: 5px;
+  margin-left: 10px;
 }
-
+.footer {
+  text-align:right;
+  margin-top: 25px;
+  padding: 10px;
+}
 ::ng-deep .title-tab .mat-badge-content {
   background-color: #a76c14; // Azul
   color: rgb(255, 255, 255);

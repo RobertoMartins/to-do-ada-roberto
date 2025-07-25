@@ -54,12 +54,19 @@ export class App implements OnInit {
   }
 
   openModalAdd(): void {
-    const ref = this.dialog.open(AddTaskDialog, { data: { title: 'Nova tarefa' } });
-    ref.beforeClosed().subscribe((task: Task)=>{
-      if(task){
+    const ref = this.dialog.open(AddTaskDialog, {
+      data: { title: 'Nova tarefa' },
+    });
+    ref.beforeClosed().subscribe((task: Task) => {
+      if (task) {
         this.tasksAll.push(task);
         this.filterTasks();
       }
-    })
+    });
+  }
+
+  delete(task: Task): void {
+    this.tasksAll = this.tasksAll.filter((item) => item !== task);
+    this.filterTasks();
   }
 }

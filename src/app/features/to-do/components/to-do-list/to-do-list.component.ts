@@ -10,18 +10,22 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrl: './to-do-list.component.scss',
 })
 export class ToDoList {
-
   @Input()
-  tasks!: Task[]
+  tasks!: Task[];
 
   @Output()
   checkedChange = new EventEmitter<Task>();
-  
+
+  @Output()
+  onDelete = new EventEmitter<Task>();
+
   drop(event: CdkDragDrop<Task[]>) {
     moveItemInArray(this.tasks, event.previousIndex, event.currentIndex);
   }
-  changeCheck(task: Task):void{
-    this.checkedChange.emit(task)
+  changeCheck(task: Task): void {
+    this.checkedChange.emit(task);
   }
-
+  actionDelete(task: Task): void {
+    this.onDelete.emit(task);
+  }
 }
